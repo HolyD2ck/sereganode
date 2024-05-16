@@ -42,13 +42,7 @@ function getRandomImagePath() {
   const fakerFolder = path.join(__dirname, "public", "img", "faker");
   const imageFiles = fs.readdirSync(fakerFolder);
   const randomImage = imageFiles[Math.floor(Math.random() * imageFiles.length)];
-  const relativePath = path.join(
-    "http://localhost:3000/",
-    "public",
-    "img",
-    "faker",
-    randomImage
-  );
+  const relativePath = path.join("public", "img", "faker", randomImage);
   return relativePath.replace(/\\/g, "/");
 }
 
@@ -64,7 +58,7 @@ function generateTicketData() {
     Вид_билета: getRandomItemFromArray(data.types),
     Цена: Math.floor(Math.random() * 10000),
     Место: Math.floor(Math.random() * 100),
-    Фото: getRandomImagePath(),
+    Фото: "http://localhost:3000/" + getRandomImagePath(),
   };
 }
 

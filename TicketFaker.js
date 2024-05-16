@@ -58,7 +58,7 @@ function generateTicketData() {
     Вид_билета: getRandomItemFromArray(data.types),
     Цена: Math.floor(Math.random() * 10000),
     Место: Math.floor(Math.random() * 100),
-    Фото: "http://localhost:3000/" + getRandomImagePath(),
+    Фото: "http://77.222.53.207:3000/" + getRandomImagePath(),
   };
 }
 

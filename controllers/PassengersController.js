@@ -67,7 +67,7 @@ router.post("/passengers", upload.single("photo"), (req, res) => {
     Паспортные_данные: req.body.pass,
     Адрес_проживания: req.body.address,
     Email: req.body.email,
-    Фото: "http://localhost:3000/" + req.file.path.replace(/\\/g, "/"),
+    Фото: "http://77.222.53.207:3000/" + req.file.path.replace(/\\/g, "/"),
   };
 
   Passenger.add(passengerData, (err, result) => {
@@ -130,7 +130,7 @@ router.put("/passengers/:id", upload.single("photo"), (req, res) => {
 
   if (req.file) {
     passengerData.Фото =
-      "http://localhost:3000/" + req.file.path.replace(/\\/g, "/");
+      "http://77.222.53.207:3000/" + req.file.path.replace(/\\/g, "/");
   }
 
   Passenger.update(req.params.id, passengerData, (err, result) => {

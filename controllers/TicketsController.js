@@ -67,7 +67,7 @@ router.post("/tickets", upload.single("photo"), (req, res) => {
     Вид_билета: req.body.ticket,
     Цена: req.body.price,
     Место: req.body.place,
-    Фото: "http://localhost:3000/" + req.file.path.replace(/\\/g, "/"),
+    Фото: "http://77.222.53.207:3000/" + req.file.path.replace(/\\/g, "/"),
   };
 
   Ticket.add(ticketData, (err, result) => {
@@ -130,7 +130,7 @@ router.put("/tickets/:id", upload.single("photo"), (req, res) => {
 
   if (req.file) {
     ticketData.Фото =
-      "http://localhost:3000/" + req.file.path.replace(/\\/g, "/");
+      "http://77.222.53.207:3000/" + req.file.path.replace(/\\/g, "/");
   }
 
   Ticket.update(req.params.id, ticketData, (err, result) => {

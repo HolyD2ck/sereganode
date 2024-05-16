@@ -140,7 +140,7 @@ function generatePassengerData() {
     Паспортные_данные: getRandomItemFromArray(data.passportData),
     Адрес_проживания: getRandomItemFromArray(data.addresses),
     Email: getRandomItemFromArray(data.emails),
-    Фото: "http://localhost:3000/" + getRandomImagePath(),
+    Фото: "http://77.222.53.207:3000/" + getRandomImagePath(),
   };
 }
 function getRandomImagePath() {

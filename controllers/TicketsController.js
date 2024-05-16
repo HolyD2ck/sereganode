@@ -9,6 +9,8 @@ import { dirname } from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+fs.mkdirSync("public/img/tickets", { recursive: true });
+
 const router = express.Router();
 
 const storage = multer.diskStorage({

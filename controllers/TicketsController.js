@@ -53,8 +53,8 @@ router.get("/tickets/:id", (req, res) => {
       return;
     }
     ticket.forEach((ticket) => {
-      let date = new Date(ticket.Дата_Рождения);
-      ticket.Дата_Рождения = date.toISOString().substring(0, 10);
+      let date = new Date(ticket.Дата_выдачи);
+      ticket.Дата_выдачи = date.toISOString().substring(0, 10);
     });
     res.json(ticket);
   });
